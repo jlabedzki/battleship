@@ -11,6 +11,5 @@ const startGame = $('#start');
 const rotateShips = $('rotateShips');
 const turn = $('#whoseTurn');
 const messageLog = $('#messageLog');
-
-
-module.exports = { userGrid, computerGrid, shipGrid, ships, destroyer, submarine, cruiser, battleship, carrier, startGame, rotateShips, turn, messageLog };
+const userSquares = [];
+const computerSquares = [];

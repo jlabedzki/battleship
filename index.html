@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="/main.js" defer></script>
   <title>Battleship</title>
 </head>
 
@@ -15,12 +14,12 @@
 
   <div class='mainContainer'>
     <div class='userContainer'>
-      <h3 class='title'>Player</h3>
+      <h3 class='title'>PLAYER</h3>
       <div class='grid userGrid'>
       </div>
     </div>
     <div class='computerContainer'>
-      <h3 class='title'>Opponent</h3>
+      <h3 class='title'>OPPONENT</h3>
       <div class='grid computerGrid'></div>
     </div>
   </div>
@@ -64,6 +63,10 @@
   </div>
   <script>
   </script>
+  <script src="src/generateBoard.js"></script>
+  <script src="src/constants.js"></script>
+  <script src="src/randomizeComputerShips.js"></script>
+  <script src="./main.js" defer></script>
 
 </body>
 
