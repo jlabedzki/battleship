@@ -14,7 +14,6 @@ h3 {
   margin-top: 20px;
   text-align: center;
   font-size: 20;
-  /* border: 2px solid rgb(70, 70, 70); */
   border-radius: 3px;
 }
 
@@ -82,16 +81,17 @@ h3 {
 }
 
 .shipGrid {
-  width: 400px;
+  width: 500px;
   height: auto;
+  margin: auto;
   padding: 5px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .destroyerContainer {
-  width: 80px;
-  height: 40px;
+  width: 100px;
+  height: 50px;
   background-color: orange;
   margin: 10px;
   display: flex;
@@ -99,8 +99,8 @@ h3 {
 }
 
 .submarineContainer {
-  width: 120px;
-  height: 40px;
+  width: 150px;
+  height: 50px;
   background-color: rgb(0, 255, 106);
   margin: 10px;
   display: flex;
@@ -108,8 +108,8 @@ h3 {
 }
 
 .cruiserContainer {
-  width: 120px;
-  height: 40px;
+  width: 150px;
+  height: 50px;
   background-color: rgb(70, 62, 29);
   margin: 10px;
   display: flex;
@@ -117,8 +117,8 @@ h3 {
 }
 
 .battleshipContainer {
-  width: 160px;
-  height: 40px;
+  width: 200px;
+  height: 50px;
   background-color: rgb(119, 0, 255);
   margin: 10px;
   display: flex;
@@ -126,8 +126,8 @@ h3 {
 }
 
 .carrierContainer {
-  width: 200px;
-  height: 40px;
+  width: 250px;
+  height: 50px;
   background-color: rgb(45, 117, 135);
   margin: 10px;
   display: flex;
@@ -135,13 +135,37 @@ h3 {
 }
 
 .ship div {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 2px;
 }
 
 .ship:hover {
   background-color: rgb(250, 149, 149);
   cursor: pointer;
+}
+
+.destroyer {
+  background-color: orange;
+}
+
+.submarine {
+  background-color: rgb(0, 255, 106);
+}
+
+.cruiser {
+  background-color: rgb(70, 62, 29);
+}
+
+.battleship {
+  background-color: rgb(119, 0, 255);
+}
+
+.carrier {
+  background-color: rgb(45, 117, 135);
+}
+
+.taken {
+  opacity: 20%;
 }
 

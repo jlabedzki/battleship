@@ -24,6 +24,40 @@
     </div>
   </div>
 
+
+  <div class='mainContainer'>
+    <div class='shipGrid'>
+      <div class='ship destroyerContainer' draggable="true">
+        <div id='destroyer1'></div>
+        <div id='destroyer2'></div>
+      </div>
+      <div class='ship submarineContainer' draggable="true">
+        <div id='submarine1'></div>
+        <div id='submarine2'></div>
+        <div id='submarine3'></div>
+      </div>
+      <div class='ship cruiserContainer' draggable="true">
+        <div id='cruiser1'></div>
+        <div id='cruiser2'></div>
+        <div id='cruiser3'></div>
+      </div>
+      <div class='ship battleshipContainer' draggable="true">
+        <div id='battleship1'></div>
+        <div id='battleship2'></div>
+        <div id='battleship3'></div>
+        <div id='battleship4'></div>
+      </div>
+      <div class='ship carrierContainer' draggable="true">
+        <div id='carrier1'></div>
+        <div id='carrier2'></div>
+        <div id='carrier3'></div>
+        <div id='carrier4'></div>
+        <div id='carrier5'></div>
+      </div>
+    </div>
+    <div class='shipGrid'></div>
+  </div>
+
   <div class='utility'>
     <button id='start'>Start Game</button>
     <button id='rotateShips'>Rotate Ships</button>
@@ -31,41 +65,11 @@
     <h3 id='messageLog'></h3>
   </div>
 
-
-  <div class='shipGrid'>
-    <div class='ship destroyerContainer' draggable="true">
-      <div id='destroyer1'></div>
-      <div id='destroyer2'></div>
-    </div>
-    <div class='ship submarineContainer' draggable="true">
-      <div id='submarine1'></div>
-      <div id='submarine2'></div>
-      <div id='submarine3'></div>
-    </div>
-    <div class='ship cruiserContainer' draggable="true">
-      <div id='cruiser1'></div>
-      <div id='cruiser2'></div>
-      <div id='cruiser3'></div>
-    </div>
-    <div class='ship battleshipContainer' draggable="true">
-      <div id='battleship1'></div>
-      <div id='battleship2'></div>
-      <div id='battleship3'></div>
-      <div id='battleship4'></div>
-    </div>
-    <div class='ship carrierContainer' draggable="true">
-      <div id='carrier1'></div>
-      <div id='carrier2'></div>
-      <div id='carrier3'></div>
-      <div id='carrier4'></div>
-      <div id='carrier5'></div>
-    </div>
-  </div>
-  <script>
-  </script>
-  <script src="src/generateBoard.js"></script>
+  <script src="src/ships.js"></script>
   <script src="src/constants.js"></script>
+  <script src="src/generateBoard.js"></script>
   <script src="src/randomizeComputerShips.js"></script>
+  <script src="src/rotateShips.js"></script>
   <script src="./main.js" defer></script>
 
 </body>
