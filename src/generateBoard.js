@@ -1,5 +1,5 @@
 //Generates a blank board with 100 individual squares
-//Takes in 3 parameters: 1. grid (user or computer) 2. squares (which array to push the sqaures to, user or computer), and 3. amount of squares to make (100)
+//Takes in 3 parameters: 1. grid (user or computer) 2. squares (which array to push the squares to; user or computer), and 3. amount of squares to make (100)
 //Each square is labeled A-J, 1-10
 //Each square has a classname 'square', and data-id of 1-100
 
@@ -12,7 +12,6 @@ const generateBoard = (grid, squares, amount) => {
 
     if (counter <= 10) {
       square.innerHTML = 'A' + counter;
-      // square.dataset.id = 'A' + counter;
     }
 
     if (counter > 10 && counter <= 20) {

@@ -13,4 +13,3 @@ const turn = $('#whoseTurn');
 const messageLog = $('#messageLog');
 const userSquares = [];
 const computerSquares = [];
-// const shipArr = [dest, sub, cruz, battle, car];
