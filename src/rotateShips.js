@@ -15,23 +15,23 @@ const rotateShips = (ship, name) => {
 };
 
 
-destroyer.click(() => {
+destroyer.dblclick(() => {
   rotateShips(destroyer, 'destroyer');
 });
 
-submarine.click(() => {
+submarine.dblclick(() => {
   rotateShips(submarine, 'submarine');
 });
 
-cruiser.click(() => {
+cruiser.dblclick(() => {
   rotateShips(cruiser, 'cruiser');
 });
 
-battleship.click(() => {
+battleship.dblclick(() => {
   rotateShips(battleship, 'battleship');
 });
 
-carrier.click(() => {
+carrier.dblclick(() => {
   rotateShips(carrier, 'carrier');
 });
 

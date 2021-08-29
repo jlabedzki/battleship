@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="src/jquery-ui/jquery-ui.min.js"></script>
   <title>Battleship</title>
 </head>
 
@@ -15,14 +16,14 @@
   <div class='mainContainer'>
     <div class='userContainer'>
       <h2 class='title'>PLAYER
-        <div class='playerTurnIndicator'></div>
+        <div id='playerTurn' class='turnIndicator'></div>
       </h2>
       <div class='grid userGrid'>
       </div>
     </div>
     <div class='computerContainer'>
       <h2 class='title'>OPPONENT
-        <div class='computerTurnIndicator'></div>
+        <div id='opponentTurn'></div>
       </h2>
       <div class='grid computerGrid'></div>
     </div>
@@ -31,10 +32,7 @@
 
   <div class='mainContainer'>
     <div class='shipGrid'>
-      <div class='ship destroyerContainer' draggable="true">
-        <div id='destroyer1'></div>
-        <div id='destroyer2'></div>
-      </div>
+      <div class='ship destroyerContainer'><div id='destroyer1'></div><div id='destroyer2'></div></div>
       <div class='ship submarineContainer' draggable="true">
         <div id='submarine1'></div>
         <div id='submarine2'></div>
@@ -64,8 +62,7 @@
 
   <div class='utility'>
     <button id='start'>Start Game</button>
-    <h3 id='whoseTurn'>Your turn.</h3>
-    <h3 id='messageLog'></h3>
+    <h3 id='messageLog'>Message Log</h3>
   </div>
 
   <script src="src/ships.js"></script>
@@ -73,6 +70,7 @@
   <script src="src/generateBoard.js"></script>
   <script src="src/randomizeComputerShips.js"></script>
   <script src="src/rotateShips.js"></script>
+  <script src="src/dragPlayerShips.js"></script>
   <script src="./main.js" defer></script>
 
 </body>
