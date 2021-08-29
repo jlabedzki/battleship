@@ -5,12 +5,14 @@ class Ship {
   }
 }
 
-const dest = new Ship('destroyer', [0, 1], [0, 10]);
+//Creating a computer ship object for each type of ship to use in the randomizeComputerBoard function. Each ship has a name and two arrays. The arrays correspond to how the ship would look like on the computerGrid horizontally and vertically, respectively.
 
-const sub = new Ship('submarine', [0, 1, 2], [0, 10, 20]);
+const computerDestroyer = new Ship('destroyer', [0, 1], [0, 10]);
 
-const cruz = new Ship('cruiser', [0, 1, 2], [0, 10, 20]);
+const computerSubmarine = new Ship('submarine', [0, 1, 2], [0, 10, 20]);
 
-const battle = new Ship('battleship', [0, 1, 2, 3], [0, 10, 20, 30]);
+const computerCruiser = new Ship('cruiser', [0, 1, 2], [0, 10, 20]);
 
-const car = new Ship('carrier', [0, 1, 2, 3, 4], [0, 10, 20, 30, 40]);
+const computerBattleship = new Ship('battleship', [0, 1, 2, 3], [0, 10, 20, 30]);
+
+const computerCarrier = new Ship('carrier', [0, 1, 2, 3, 4], [0, 10, 20, 30, 40]);

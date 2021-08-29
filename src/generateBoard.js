@@ -51,8 +51,13 @@ const generateBoard = (grid, squares, amount) => {
       square.innerHTML = 'J' + (counter - 90);
     }
 
+    //Setting the id for each square. Using dataset.id so that the user and computer's squares can share the same id.
     square.dataset.id = counter;
+
+    //Using jquery to add each square to the board
     grid.append(square);
+
+    //Pushing each square to an array (either userSquares or computerSquares) to be used in other functions.
     squares.push(square);
     counter++;
   }

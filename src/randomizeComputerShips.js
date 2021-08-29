@@ -1,3 +1,5 @@
+
+
 const randomizeComputerShips = (ship) => {
   const vertical = ship.directions[1];
   const randomDirection = Math.floor(Math.random() * 2);
