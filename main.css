@@ -27,10 +27,10 @@ h2 {
   height: 15px;
   width: 15px;
   transform: scale(1);
-  animation: pulse 2s infinite;
+  animation: pulse-turn 2s infinite;
 }
 
-@keyframes pulse {
+@keyframes pulse-turn {
   0% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgb(235, 127, 127, 0.7);
@@ -110,7 +110,7 @@ h2 {
   width:auto;
 }
 
-.shipGrid {
+.messageLog {
   width: 500px;
   height: auto;
   margin: auto;
@@ -119,131 +119,67 @@ h2 {
   flex-wrap: wrap;
 }
 
-.destroyerContainer {
-  width: 100px;
-  height: 50px;
-  background-color: rgb(250, 149, 149);
-  margin: 10px;
-  display: flex;
-  border-radius: 2px;
-}
-
-.destroyerContainerVertical {
-  width: 50px;
-  height: 100px;
-  background-color: rgb(250, 149, 149);
-  margin: 10px;
-  flex-wrap: flex;
-  border-radius: 2px;
-}
-
-.submarineContainer {
-  width: 150px;
-  height: 50px;
-  background-color: rgb(250, 149, 149);
-  margin: 10px;
-  display: flex;
-  border-radius: 2px;
-}
-
-.submarineContainerVertical {
-  width: 50px;
-  height: 150px;
-  background-color: rgb(250, 149, 149);
-  margin: 10px;
-  flex-wrap: flex;
-  border-radius: 2px;
-}
-
-.cruiserContainer {
-  width: 150px;
-  height: 50px;
-  background-color: rgb(250, 149, 149);
-  margin: 10px;
-  display: flex;
-  border-radius: 2px;
-}
-.cruiserContainerVertical {
-  width: 50px;
-  height: 150px;
-  background-color: rgb(250, 149, 149);
-  margin: 10px;
-  flex-wrap: flex;
-  border-radius: 2px;
-}
-
-.battleshipContainer {
-  width: 200px;
-  height: 50px;
-  background-color: rgb(250, 149, 149);
-  margin: 10px;
-  display: flex;
-  border-radius: 2px;
-}
-
-.battleshipContainerVertical {
-  width: 50px;
-  height: 200px;
-  background-color: rgb(250, 149, 149);
-  margin: 10px;
-  flex-wrap: flex;
-  border-radius: 2px;
-}
-
-.carrierContainer {
-  width: 250px;
-  height: 50px;
-  background-color: rgb(250, 149, 149);
-  margin: 10px;
-  display: flex;
-  border-radius: 2px;
-}
-
-.carrierContainerVertical {
-  width: 50px;
-  height: 250px;
-  background-color: rgb(250, 149, 149);
-  margin: 10px;
-  flex-wrap: flex;
-  border-radius: 2px;
-}
-
-.ship div {
-  width: 50px;
-  height: 50px;
-  border-radius: 2px;
-}
-
-.ship:hover {
-  background-color: rgb(250, 105, 105);
-  cursor: pointer;
-}
-
-.ship:active {
-  cursor:grabbing;
-}
-
 .destroyer {
-  background-color: orange;
+  background: rgb(235, 127, 127);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  margin: auto;
+  transform: scale(1);
+  animation: pulse 2s infinite;
 }
 
 .submarine {
-  background-color: rgb(0, 255, 106);
+  background-color: rgb(254, 120, 120);
 }
 
 .cruiser {
-  background-color: rgb(70, 62, 29);
+  background-color: rgb(254, 120, 120);
 }
 
 .battleship {
-  background-color: rgb(119, 0, 255);
+  background-color: rgb(254, 120, 120);
 }
 
 .carrier {
-  background-color: rgb(45, 117, 135);
+  background-color: rgb(254, 120, 120);
 }
 
-.taken {
-  opacity: 20%;
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgb(235, 127, 127, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
+
+.computerDestroyer {
+  opacity: 0%;
+}
+
+.computerSubmarine {
+  opacity: 0%;
+}
+
+.computerCruiser {
+  opacity: 0%;
+}
+
+.computerBattleship {
+  opacity: 0%;
+}
+
+.computerCarrier {
+  opacity: 0%;
+}
+
+
 

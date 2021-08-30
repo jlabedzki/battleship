@@ -32,32 +32,9 @@
 
   <div class='mainContainer'>
     <div class='shipGrid'>
-      <div class='ship destroyerContainer'><div id='destroyer1'></div><div id='destroyer2'></div></div>
-      <div class='ship submarineContainer' draggable="true">
-        <div id='submarine1'></div>
-        <div id='submarine2'></div>
-        <div id='submarine3'></div>
-      </div>
-      <div class='ship cruiserContainer' draggable="true">
-        <div id='cruiser1'></div>
-        <div id='cruiser2'></div>
-        <div id='cruiser3'></div>
-      </div>
-      <div class='ship battleshipContainer' draggable="true">
-        <div id='battleship1'></div>
-        <div id='battleship2'></div>
-        <div id='battleship3'></div>
-        <div id='battleship4'></div>
-      </div>
-      <div class='ship carrierContainer' draggable="true">
-        <div id='carrier1'></div>
-        <div id='carrier2'></div>
-        <div id='carrier3'></div>
-        <div id='carrier4'></div>
-        <div id='carrier5'></div>
-      </div>
+      <button class='randomize'>Reshuffle</button>
     </div>
-    <div class='shipGrid'></div>
+    <div class='messageLog'></div>
   </div>
 
   <div class='utility'>
@@ -69,8 +46,8 @@
   <script src="src/constants.js"></script>
   <script src="src/generateBoard.js"></script>
   <script src="src/randomizeComputerShips.js"></script>
-  <script src="src/rotateShips.js"></script>
-  <script src="src/dragPlayerShips.js"></script>
+  <script src="src/randomizePlayerShips.js"></script>
+  <script src="src/clearBoard.js"></script>
   <script src="./main.js" defer></script>
 
 </body>
