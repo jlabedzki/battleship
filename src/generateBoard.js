@@ -62,6 +62,7 @@ const generateComputerBoard = (grid, squares, amount) => {
   }
 };
 
+//Omit coordinates for playerboard for a cleaner look.
 const generatePlayerBoard = (grid, squares, amount) => {
   let counter = 1;
 
