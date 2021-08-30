@@ -21,7 +21,6 @@ h2 {
 .turnIndicator {
   background: rgb(235, 127, 127);
   border-radius: 50%;
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
   margin: auto;
   margin-left: 10px;
   height: 15px;
@@ -64,7 +63,7 @@ h2 {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  background-color: rgba(169, 215, 236, 0.474);
+  background-color: rgba(169, 215, 236, 0.674);
   border-radius: 5px;
   opacity: 90%;
 }
@@ -79,7 +78,7 @@ h2 {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  background-color: rgb(169, 215, 236, 0.474);
+  background-color: rgb(169, 215, 236, 0.674);
   border-radius: 5px;
   opacity: 90%;
 }
@@ -87,40 +86,50 @@ h2 {
 .grid div {
   width: 48px;
   height: 48px;
-  line-height: 48px;
   text-align: center;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size: 15px;
-  color: rgb(107, 193, 233);
+  color: rgb(71, 144, 193, 0);
   border: 1px solid rgb(255, 255, 255);
   border-radius: 2px;
   opacity: 100%;
 }
 
-.square:hover {
-  background-color: rgb(250, 149, 149);
+.computerGrid div:hover {
+  background-color: rgb(119, 190, 223);
+  line-height: -40px;
   cursor: pointer;
   font-weight: bold;
   font-size: 20px;
-  color: rgb(33, 33, 33);
+  color: rgb(23, 65, 90);
+  animation: pulse-hover 0.5s infinite;
 }
 
-.utility {
-  padding: 10px;
-  width:auto;
+@keyframes pulse-hover {
+  0% {
+    transform: scale(1.1);
+  }
+  
+  70% {
+    transform: scale(1.2);
+  }
+  
+  100% {
+    transform: scale(1.1);
+  }
 }
 
-.messageLog {
-  width: 500px;
+/* .messageLog {
+  width: auto;
   height: auto;
   margin: auto;
   padding: 5px;
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
 .destroyer {
-  background: rgb(235, 127, 127);
+  background: rgb(254, 120, 120);
   border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
   margin: auto;
@@ -129,19 +138,39 @@ h2 {
 }
 
 .submarine {
-  background-color: rgb(254, 120, 120);
+  background: rgb(254, 120, 120);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  margin: auto;
+  transform: scale(1);
+  animation: pulse 2s infinite;
 }
 
 .cruiser {
-  background-color: rgb(254, 120, 120);
+  background: rgb(254, 120, 120);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  margin: auto;
+  transform: scale(1);
+  animation: pulse 2s infinite;
 }
 
 .battleship {
-  background-color: rgb(254, 120, 120);
+  background: rgb(254, 120, 120);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  margin: auto;
+  transform: scale(1);
+  animation: pulse 2s infinite;
 }
 
 .carrier {
-  background-color: rgb(254, 120, 120);
+  background: rgb(254, 120, 120);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  margin: auto;
+  transform: scale(1);
+  animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
@@ -181,5 +210,12 @@ h2 {
   opacity: 0%;
 }
 
+.wrapper{
+  position: fixed;
+  margin-top: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 

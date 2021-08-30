@@ -1,6 +1,6 @@
 $(document).ready(() => {
-  generateBoard(userGrid, userSquares, 100);
-  generateBoard(computerGrid, computerSquares, 100);
+  generatePlayerBoard(userGrid, userSquares, 100);
+  generateComputerBoard(computerGrid, computerSquares, 100);
 
   randomizePlayerShips(destroyer);
   randomizePlayerShips(submarine);
@@ -14,7 +14,7 @@ $(document).ready(() => {
   randomizeComputerShips(computerBattleship);
   randomizeComputerShips(computerCarrier);
 
-  $('.randomize').click(() => {
+  $('#reshuffle').click(() => {
     clearBoard(destroyer);
     clearBoard(submarine);
     clearBoard(cruiser);

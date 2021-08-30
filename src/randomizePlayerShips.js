@@ -25,14 +25,14 @@ const randomizePlayerShips = (ship) => {
   //Next two if statements: Adding the 'taken' and the ship's name to the classList of the square we place on. If the ship is being placed vertically then we don't need to check the right edge.
   if (currentDirection === vertical && !taken) {
     currentDirection.forEach(ind => {
-      userSquares[randomize + ind].classList.add('taken', ship.name);
+      userSquares[randomize + ind].classList.add('taken', 'pulsing', ship.name);
     });
     return;
   }
 
   if (!taken && !rightEdge) {
     currentDirection.forEach(ind => {
-      userSquares[randomize + ind].classList.add('taken', ship.name);
+      userSquares[randomize + ind].classList.add('taken', 'pulsing', ship.name);
     });
     return;
   }
