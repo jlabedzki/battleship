@@ -3,7 +3,7 @@
 //Each square is labeled A-J, 1-10
 //Each square has a classname 'square', and data-id of 1-100
 
-const generateComputerBoard = (grid, squares, amount) => {
+const generateBoard = (grid, squares, amount) => {
   let counter = 1;
 
   while (counter <= amount) {
@@ -62,23 +62,23 @@ const generateComputerBoard = (grid, squares, amount) => {
   }
 };
 
-//Omit coordinates for playerboard for a cleaner look.
-const generatePlayerBoard = (grid, squares, amount) => {
-  let counter = 1;
+// //Omit coordinates for playerboard for a cleaner look.
+// const generatePlayerBoard = (grid, squares, amount) => {
+//   let counter = 1;
 
-  while (counter <= amount) {
-    const square = document.createElement('div');
-    square.className = 'square';
+//   while (counter <= amount) {
+//     const square = document.createElement('div');
+//     square.className = 'square';
 
-    //Setting the id for each square. Using dataset.id so that the user and computer's squares can share the same id.
-    square.dataset.id = counter;
+//     //Setting the id for each square. Using dataset.id so that the user and computer's squares can share the same id.
+//     square.dataset.id = counter;
 
-    //Using jquery to add each square to the board
-    grid.append(square);
+//     //Using jquery to add each square to the board
+//     grid.append(square);
 
-    //Pushing each square to an array (either userSquares or computerSquares) to be used in other functions.
-    squares.push(square);
-    counter++;
-  }
-};
+//     //Pushing each square to an array (either userSquares or computerSquares) to be used in other functions.
+//     squares.push(square);
+//     counter++;
+//   }
+// };
 

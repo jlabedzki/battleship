@@ -1,13 +1,13 @@
 $(document).ready(() => {
-  generatePlayerBoard(userGrid, userSquares, 100);
-  generateComputerBoard(computerGrid, computerSquares, 100);
+  generateBoard(userGrid, userSquares, 100);
+  generateBoard(computerGrid, computerSquares, 100);
 
   randomizePlayerShips(destroyer);
   randomizePlayerShips(submarine);
   randomizePlayerShips(cruiser);
   randomizePlayerShips(battleship);
   randomizePlayerShips(carrier);
-  
+
   randomizeComputerShips(computerDestroyer);
   randomizeComputerShips(computerSubmarine);
   randomizeComputerShips(computerCruiser);

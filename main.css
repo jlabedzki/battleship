@@ -102,6 +102,14 @@ h2 {
 .taken {
 } */
 
+.userGrid div:hover {
+  line-height: -40px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(23, 65, 90);
+}
+
 .computerGrid div:hover {
   background-color: rgb(119, 190, 223);
   line-height: -40px;
