@@ -2,28 +2,28 @@ $(document).ready(() => {
   generateBoard(userGrid, userSquares, 100);
   generateBoard(computerGrid, computerSquares, 100);
 
-  randomizePlayerShips(destroyer);
-  randomizePlayerShips(submarine);
-  randomizePlayerShips(cruiser);
-  randomizePlayerShips(battleship);
-  randomizePlayerShips(carrier);
+  randomizeShips(destroyer, userSquares);
+  randomizeShips(submarine, userSquares);
+  randomizeShips(cruiser, userSquares);
+  randomizeShips(battleship, userSquares);
+  randomizeShips(carrier, userSquares);
 
-  randomizeComputerShips(computerDestroyer);
-  randomizeComputerShips(computerSubmarine);
-  randomizeComputerShips(computerCruiser);
-  randomizeComputerShips(computerBattleship);
-  randomizeComputerShips(computerCarrier);
+  randomizeShips(computerDestroyer, computerSquares);
+  randomizeShips(computerSubmarine, computerSquares);
+  randomizeShips(computerCruiser, computerSquares);
+  randomizeShips(computerBattleship, computerSquares);
+  randomizeShips(computerCarrier, computerSquares);
 
   $('#reshuffle').click(function () {
     const btn = $(this);
 
     clearBoard();
     setTimeout(() => {
-      randomizePlayerShips(destroyer);
-      randomizePlayerShips(submarine);
-      randomizePlayerShips(cruiser);
-      randomizePlayerShips(battleship);
-      randomizePlayerShips(carrier);
+      randomizeShips(destroyer, userSquares);
+      randomizeShips(submarine, userSquares);
+      randomizeShips(cruiser, userSquares);
+      randomizeShips(battleship, userSquares);
+      randomizeShips(carrier, userSquares);
     }, 250)
 
     btn.prop('disabled', true);
@@ -33,6 +33,7 @@ $(document).ready(() => {
   });
 
   $(start).click(() => {
+    $('.button').prop('disabled', true);
     startGame();
   });
 });

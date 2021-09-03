@@ -18,6 +18,10 @@ h2 {
   display: inline-flex;
 }
 
+#reshuffle {
+  justify-content: left;
+}
+
 .turnIndicator {
   color: rgb(254, 120, 120);
   border-radius: 50%;
