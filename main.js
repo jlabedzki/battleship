@@ -14,16 +14,25 @@ $(document).ready(() => {
   randomizeComputerShips(computerBattleship);
   randomizeComputerShips(computerCarrier);
 
-  $('#reshuffle').click(() => {
-    clearBoard(destroyer);
-    clearBoard(submarine);
-    clearBoard(cruiser);
-    clearBoard(battleship);
-    clearBoard(carrier);
-    randomizePlayerShips(destroyer);
-    randomizePlayerShips(submarine);
-    randomizePlayerShips(cruiser);
-    randomizePlayerShips(battleship);
-    randomizePlayerShips(carrier);
+  $('#reshuffle').click(function () {
+    const btn = $(this);
+
+    clearBoard();
+    setTimeout(() => {
+      randomizePlayerShips(destroyer);
+      randomizePlayerShips(submarine);
+      randomizePlayerShips(cruiser);
+      randomizePlayerShips(battleship);
+      randomizePlayerShips(carrier);
+    }, 250)
+
+    btn.prop('disabled', true);
+    window.setTimeout(() => {
+      btn.prop('disabled', false);
+    }, 300);
+  });
+
+  $(start).click(() => {
+    startGame();
   });
 });
