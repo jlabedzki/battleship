@@ -17,19 +17,19 @@
       <h2 class='title'>PLAYER
         <div id='playerTurn' class='turnIndicator'></div>
       </h2>
-      <button id='reshuffle' class='button'>Reshuffle</button>
       <div class='grid userGrid'>
       </div>
     </div>
-    <div class='computerContainer'>
+    <div class='opponentContainer'>
       <h2 class='title'>OPPONENT
         <div id='opponentTurn' class='turnIndicator'></div>
       </h2>
-      <div class='grid computerGrid'></div>
+      <div class='grid opponentGrid'></div>
     </div>
   </div>
 
   <div class='buttonHolder'>
+    <button id='reshuffle' class='button'>Reshuffle</button>
     <button id='start' class='button'>Start Game</button>
   </div>
 
@@ -44,8 +44,7 @@
   <script src="src/ships.js"></script>
   <script src="src/constants.js"></script>
   <script src="src/generateBoard.js"></script>
-  <script src="src/randomizeComputerShips.js"></script>
-  <script src="src/randomizePlayerShips.js"></script>
+  <script src="src/randomizeShips.js"></script>
   <script src="src/clearBoard.js"></script>
   <script src="src/startGame.js"></script>
   <script src="./main.js"></script>

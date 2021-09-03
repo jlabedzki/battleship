@@ -1,4 +1,4 @@
-const randomizeShips = (ship, squaresArray) => {
+const randomizeShips = (ship, array) => {
   const horizontal = ship.directions[0];
   const vertical = ship.directions[1];
   const randomDirection = Math.floor(Math.random() * 2);
@@ -16,7 +16,7 @@ const randomizeShips = (ship, squaresArray) => {
   //Initialize a random starting square to place a ship based on the number of squares on the board minus the length of the ship times its direction. This equation could produce a negative number, thus the use of Math.abs()
   const randomize = Math.abs(Math.floor(Math.random() * 100 - (ship.directions[0].length * direction)));
 
-  const taken = currentDirection.some(ind => squaresArray[randomize + ind].classList.contains('taken'));
+  const taken = currentDirection.some(ind => array[randomize + ind].classList.contains('taken'));
 
   //Check to see if we're far enough away from the right edge to place our entire ship. 
   const rightEdge = currentDirection.some(ind => (randomize + ind) % 10 === 9);
@@ -24,19 +24,19 @@ const randomizeShips = (ship, squaresArray) => {
   //If the ship is being placed vertically no need to check the edge placement
   if (currentDirection === vertical && !taken) {
     currentDirection.forEach(ind => {
-      squaresArray[randomize + ind].classList.add('taken', 'pulsing', ship.name);
+      array[randomize + ind].classList.add('taken', 'pulsing', ship.name);
     });
     return;
   }
 
   if (!taken && !rightEdge) {
     currentDirection.forEach(ind => {
-      squaresArray[randomize + ind].classList.add('taken', ship.name);
+      array[randomize + ind].classList.add('taken', ship.name);
     });
     return;
   }
 
   //If the square we want to start on is taken or if we're too close to the right edge for a horizontal placement, then we run the function again.
-  randomizeShips(ship, squaresArray);
+  randomizeShips(ship, array);
 
 };

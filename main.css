@@ -76,11 +76,11 @@ h2 {
   opacity: 90%;
 }
 
-.computerContainer {
+.opponentContainer {
   margin: auto;
 }
 
-.computerGrid {
+.opponentGrid {
   width: 500px;
   height: 500px;
   margin: auto;
@@ -114,7 +114,7 @@ h2 {
   color: rgb(23, 65, 90);
 }
 
-.computerGrid div:hover {
+.opponentGrid div:hover {
   background-color: rgb(119, 190, 223);
   line-height: -40px;
   cursor: pointer;
@@ -212,23 +212,23 @@ h2 {
   }
 }
 
-.computerDestroyer {
+.opponentDestroyer {
   opacity: 0%;
 }
 
-.computerSubmarine {
+.opponentSubmarine {
   opacity: 0%;
 }
 
-.computerCruiser {
+.opponentCruiser {
   opacity: 0%;
 }
 
-.computerBattleship {
+.opponentBattleship {
   opacity: 0%;
 }
 
-.computerCarrier {
+.opponentCarrier {
   opacity: 0%;
 }
 

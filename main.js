@@ -1,6 +1,6 @@
 $(document).ready(() => {
   generateBoard(userGrid, userSquares, 100);
-  generateBoard(computerGrid, computerSquares, 100);
+  generateBoard(opponentGrid, opponentSquares, 100);
 
   randomizeShips(destroyer, userSquares);
   randomizeShips(submarine, userSquares);
@@ -8,11 +8,11 @@ $(document).ready(() => {
   randomizeShips(battleship, userSquares);
   randomizeShips(carrier, userSquares);
 
-  randomizeShips(computerDestroyer, computerSquares);
-  randomizeShips(computerSubmarine, computerSquares);
-  randomizeShips(computerCruiser, computerSquares);
-  randomizeShips(computerBattleship, computerSquares);
-  randomizeShips(computerCarrier, computerSquares);
+  randomizeShips(opponentDestroyer, opponentSquares);
+  randomizeShips(opponentSubmarine, opponentSquares);
+  randomizeShips(opponentCruiser, opponentSquares);
+  randomizeShips(opponentBattleship, opponentSquares);
+  randomizeShips(opponentCarrier, opponentSquares);
 
   $('#reshuffle').click(function () {
     const btn = $(this);
@@ -33,7 +33,7 @@ $(document).ready(() => {
   });
 
   $(start).click(() => {
-    $('.button').prop('disabled', true);
     startGame();
+    $('.button').hide();
   });
 });
