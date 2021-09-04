@@ -37,7 +37,6 @@ $(document).ready(() => {
   $(start).click(() => {
     gameplay();
     $('.button').hide();
-    $('#info').html('Info:');
     $('#gameInfo').show();
   });
 
