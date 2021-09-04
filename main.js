@@ -1,4 +1,5 @@
 $(document).ready(() => {
+  $('#gameInfo').hide();
   generateBoard(userGrid, userSquares, 100);
   generateBoard(opponentGrid, opponentSquares, 100);
 
@@ -36,6 +37,7 @@ $(document).ready(() => {
     gameplay();
     $('.button').hide();
     $('#info').html('Info:');
+    $('#gameInfo').show();
   });
 
 });

@@ -17,6 +17,7 @@ let opponentCarrierCount = 5;
 let opponentTotalCount = 17;
 
 const fireMissile = square => {
+  const label = $(square).html();
 
   if (!$(square).hasClass('hit') && !$(square).hasClass('miss')) {
 
@@ -28,11 +29,11 @@ const fireMissile = square => {
 
     if ($(square).hasClass('taken')) {
       opponentTotalCount--;
-      $(square).removeClass();
+      $('#messageLog').prepend(`<p>Player fires at ${label}: <strong>HIT!</strong></p>`)
       $(square).addClass('hit');
       $(square).html('');
     } else {
-      $(square).removeClass();
+      $('#messageLog').prepend(`<p>Player fires at ${label}: <strong>MISS!</strong></p>`)
       $(square).addClass('miss');
       $(square).html('');
     }
@@ -44,8 +45,8 @@ const fireMissile = square => {
 
 const opponentFire = () => {
   const random = Math.floor(Math.random() * 100);
-
   const square = userSquares[random];
+  const label = $(square).html();
 
   if (!$(square).hasClass('hit') && !$(square).hasClass('miss')) {
     if ($(square).hasClass('destroyer')) {
@@ -71,9 +72,11 @@ const opponentFire = () => {
 
     if ($(square).hasClass('taken')) {
       userTotalCount--;
+      $('#messageLog').prepend(`<p>Opponent fires at ${label}: <strong>HIT!</strong></p>`)
       $(square).addClass('hit');
       $(square).html('');
     } else {
+      $('#messageLog').prepend(`<p>Opponent fires at ${label}: <strong>MISS!</strong></p>`)
       $(square).addClass('miss');
       $(square).html('');
     }

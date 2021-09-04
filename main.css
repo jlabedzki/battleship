@@ -2,7 +2,6 @@
 h2 {
   color: rgb(70, 70, 70);
   font-family: Arial, Helvetica, sans-serif;
-  padding: 5px;
   font-weight: 500;
 }
 
@@ -11,13 +10,17 @@ h2 {
 }
 
 .title {
-  margin: auto;
-  margin-bottom: 10px;
-  margin-top: 20px;
+  width: 100%;
+  /* background-color: rgb(64, 144, 181); */
+  background-color: rgb(78, 80, 111);
+  color: white;
+  /* color: rgb(70, 70, 70); */
   text-align: center;
   font-size: 20;
+  line-height: 40px;
+  height: 40px;
   border-radius: 3px;
-  display: inline-flex;
+  box-shadow: 0 4px 7px -1px rgb(111, 111, 111);
 }
 
 .underline {
@@ -56,7 +59,6 @@ h2 {
 .mainContainer {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
   width:auto;
 }
 
@@ -259,7 +261,7 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
   border: none;
   border-radius: 5px;
-  background-color: rgb(64, 144, 181);
+  background-color: rgb(254, 120, 120);
   color: white;
   box-shadow: 0 6px 9px -1px rgb(155, 155, 155);
 }
@@ -300,8 +302,8 @@ h2 {
   justify-content: center;
 }
 
-#messageLog {
-  margin-top: 20px;
+#gameInfo {
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -311,22 +313,29 @@ h2 {
   width: 350px;
   height: auto;
   margin: 10px;
+  border-top: 5px solid rgb(78, 80, 111);
+  border-radius: 5px;
   box-shadow: 0 6px 9px -1px rgb(155, 155, 155);
 }
 
-#gameInfo {
-  background-color: thistle;
+#messageLog {
   width: 400px;
-  height: 300px;
+  height: 250px;
   margin: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
   overflow: auto;
-  resize: vertical;
+  border-top: 5px solid rgb(254, 120, 120);
+  border-radius: 5px;
+  box-shadow: 0 6px 9px -1px rgb(111, 111, 111);
 }
 
 #opponentShipsRemaining {
   width: 350px;
   height: auto;
   margin: 10px;
+  border-radius: 5px;
+  border-top: 5px solid rgb(78, 80, 111);
   box-shadow: 0 6px 9px -1px rgb(111, 111, 111);
 }
 
@@ -334,5 +343,5 @@ p {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(70, 70, 70);
-  text-align: justify;
+  text-align:center;
 }
