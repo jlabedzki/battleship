@@ -1,4 +1,4 @@
-let isGameOver = false;
+// let isGameOver = false;
 let turn = 'user';
 let opponentPreviousTurn;
 
@@ -37,6 +37,32 @@ const fireMissile = square => {
       $(square).addClass('miss');
       $(square).html('');
     }
+
+    if (opponentDestroyerCount === 0) {
+      $('#messageLog').prepend('<p>Opponent\'s <strong>destroyer</strong> sunk!');
+      $('#oDestroyer').addClass('linethrough');
+      opponentDestroyerCount--;
+    };
+    if (opponentSubmarineCount === 0) {
+      $('#messageLog').prepend('<p>Opponent\'s <strong>submarine</strong> sunk!');
+      $('#oSubmarine').addClass('linethrough');
+      opponentSubmarineCount--;
+    };
+    if (opponentCruiserCount === 0) {
+      $('#messageLog').prepend('<p>Opponent\'s <strong>cruiser</strong> sunk!');
+      $('#oCruiser').addClass('linethrough');
+      opponentCruiserCount--;
+    };
+    if (opponentBattleshipCount === 0) {
+      $('#messageLog').prepend('<p>Opponent\'s <strong>battleship</strong> sunk!');
+      $('#oBattleship').addClass('linethrough');
+      opponentBattleshipCount--;
+    };
+    if (opponentCarrierCount === 0) {
+      $('#messageLog').prepend('<p>Opponent\'s <strong>carrier</strong> sunk!');
+      $('#oCarrier').addClass('linethrough');
+      opponentCarrierCount--;
+    };
 
     turn = 'opponent';
     gameplay();
@@ -81,6 +107,32 @@ const opponentFire = () => {
       $(square).html('');
     }
 
+    if (destroyerCount === 0) {
+      $('#messageLog').prepend('<p>Player\'s <strong>destroyer</strong> sunk!');
+      $('#pDestroyer').addClass('linethrough');
+      destroyerCount--;
+    }
+    if (submarineCount === 0) {
+      $('#messageLog').prepend('<p>Player\'s <strong>submarine</strong> sunk!');
+      $('#pSubmarine').addClass('linethrough');
+      submarineCount--;
+    }
+    if (cruiserCount === 0) {
+      $('#messageLog').prepend('<p>Player\'s <strong>cruiser</strong> sunk!');
+      $('#pCruiser').addClass('linethrough');
+      cruiserCount--;
+    }
+    if (battleshipCount === 0) {
+      $('#messageLog').prepend('<p>Player\'s <strong>battleship</strong> sunk!');
+      $('#pBattleship').addClass('linethrough');
+      battleshipCount--;
+    }
+    if (carrierCount === 0) {
+      $('#messageLog').prepend('<p>Player\'s <strong>carrier</strong> sunk!');
+      $('#pCarrier').addClass('linethrough');
+      carrierCount--;
+    }
+
     turn = 'user'
     gameplay();
   } else {
@@ -89,17 +141,16 @@ const opponentFire = () => {
 };
 
 const gameplay = () => {
-  console.log('usercount:', userTotalCount, 'opponent count:', opponentTotalCount);
   if (userTotalCount === 0 || opponentTotalCount === 0) {
-    isGameOver = true;
-  }
-
-  if (isGameOver) {
     opponentSquares.forEach(square => {
       $(square).off('click');
     })
+    $(playerTurn).removeClass('turnIndicator');
+    $(opponentTurn).removeClass('turnIndicator');
+    $('#gameInfo').hide();
 
-    return gameOver('user');
+    if (userTotalCount === 0) return gameOver('Opponent');
+    if (opponentTotalCount === 0) return gameOver('Player');
   }
 
   if (turn === 'user') {
@@ -132,6 +183,7 @@ const gameplay = () => {
 const gameOver = player => {
   $(playerTurn).html('');
   $(opponentTurn).html('');
-  let winner = player;
+  $('#winner').html(`Winner: ${player}`);
+  $('.gameOver').show();
   return;
 }

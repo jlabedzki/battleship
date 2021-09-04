@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Black+Ops+One&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Battleship</title>
 </head>
@@ -34,7 +37,7 @@
 
   <div id='gameInfo'>
     <div id="playerShipsRemaining">
-      <h2 style="text-align: center;">Player Ships Remaining:</h2>
+      <h2 class="title2" style="text-align: center;">Player Ships</h2>
       <p id="pDestroyer">Destroyer</p>
       <p id="pSubmarine">Submarine</p>
       <p id="pCruiser">Cruiser</p>
@@ -44,7 +47,7 @@
     <div id="messageLog">
     </div>
     <div id="opponentShipsRemaining">
-      <h2 style="text-align: center;">Opponent Ships Remaining:</h2>
+      <h2 class="title2" style="text-align: center;">Opponent Ships</h2>
       <p id="oDestroyer">Destroyer</p>
       <p id="oSubmarine">Submarine</p>
       <p id="oCruiser">Cruiser</p>
@@ -53,14 +56,21 @@
     </div>
   </div>
 
+  <div class='gameOver'>
+    <h3>Game Over!
+    </h3>
+    <p id="winner" style="font-size: 25px;"></p>
+    <button id='playAgain'>Play Again</button>
+  </div>
 
 
-  <script src="src/ships.js"></script>
-  <script src="src/constants.js"></script>
-  <script src="src/generateBoard.js"></script>
-  <script src="src/randomizeShips.js"></script>
-  <script src="src/clearBoard.js"></script>
-  <script src="src/gameplay.js"></script>
+
+  <script src="src/js/ships.js"></script>
+  <script src="src/js/constants.js"></script>
+  <script src="src/js/generateBoard.js"></script>
+  <script src="src/js/randomizeShips.js"></script>
+  <script src="src/js/clearBoard.js"></script>
+  <script src="src/js/gameplay.js"></script>
   <script src="./main.js"></script>
 
 </body>

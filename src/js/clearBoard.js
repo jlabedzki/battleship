@@ -1,8 +1,8 @@
-
-
 const clearBoard = (squares) => {
   squares.forEach(square => {
     $(square).removeClass('taken');
+    $(square).removeClass('hit');
+    $(square).removeClass('miss');
     $(square).removeClass('destroyer');
     $(square).removeClass('submarine');
     $(square).removeClass('cruiser');
