@@ -1,7 +1,6 @@
 const userGrid = $('.userGrid');
 const opponentGrid = $('.opponentGrid');
 const start = $('#start');
-const turn = $('#whoseTurn');
 const messageLog = $('#messageLog');
 const userSquares = [];
 const opponentSquares = [];

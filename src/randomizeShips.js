@@ -24,7 +24,7 @@ const randomizeShips = (ship, array) => {
   //If the ship is being placed vertically no need to check the edge placement
   if (currentDirection === vertical && !taken) {
     currentDirection.forEach(ind => {
-      array[randomize + ind].classList.add('taken', 'pulsing', ship.name);
+      array[randomize + ind].classList.add('taken', ship.name);
     });
     return;
   }

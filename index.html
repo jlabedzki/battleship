@@ -15,27 +15,62 @@
   <div class='mainContainer'>
     <div class='userContainer'>
       <h2 class='title'>PLAYER
-        <div id='playerTurn' class='turnIndicator'></div>
       </h2>
       <div class='grid userGrid'>
       </div>
+      <div id="playerTurn" class="underline"></div>
     </div>
     <div class='opponentContainer'>
       <h2 class='title'>OPPONENT
-        <div id='opponentTurn' class='turnIndicator'></div>
       </h2>
       <div class='grid opponentGrid'></div>
+      <div id="opponentTurn" class="underline"></div>
     </div>
   </div>
 
   <div class='buttonHolder'>
-    <button id='reshuffle' class='button'>Reshuffle</button>
+    <button id='reshuffle' class='button'>Rearrange Ships</button>
     <button id='start' class='button'>Start Game</button>
   </div>
 
-  <div>
-    <div class='messageLog'>
-      <h3 id='messageLog'>Message Log</h3>
+  <div id='messageLog'>
+    <div id="playerShipsRemaining">
+      <h2 style="text-align: center;">Player Ships Remaining:</h2>
+      <p>Destroyer</p>
+      <p>Submarine</p>
+      <p>Cruiser</p>
+      <p>Battleship</p>
+      <p>Carrier</p>
+    </div>
+    <div id="gameInfo">
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+      <p>Player sunk opponents battleship!</p>
+    </div>
+    <div id="opponentShipsRemaining">
+      <h2 style="text-align: center;">Opponent Ships Remaining:</h2>
+      <p>Destroyer</p>
+      <p>Submarine</p>
+      <p>Cruiser</p>
+      <p>Battleship</p>
+      <p>Carrier</p>
     </div>
   </div>
 
@@ -46,7 +81,7 @@
   <script src="src/generateBoard.js"></script>
   <script src="src/randomizeShips.js"></script>
   <script src="src/clearBoard.js"></script>
-  <script src="src/startGame.js"></script>
+  <script src="src/gameplay.js"></script>
   <script src="./main.js"></script>
 
 </body>

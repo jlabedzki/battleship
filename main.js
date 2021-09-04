@@ -17,7 +17,7 @@ $(document).ready(() => {
   $('#reshuffle').click(function () {
     const btn = $(this);
 
-    clearBoard();
+    clearBoard(userSquares);
     setTimeout(() => {
       randomizeShips(destroyer, userSquares);
       randomizeShips(submarine, userSquares);
@@ -33,7 +33,9 @@ $(document).ready(() => {
   });
 
   $(start).click(() => {
-    startGame();
+    gameplay();
     $('.button').hide();
+    $('#info').html('Info:');
   });
+
 });
