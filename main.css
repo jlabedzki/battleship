@@ -23,31 +23,6 @@ body {
   align-items: center;
 }
 
-.cursor {
-  position: relative;
-}
-.cursor i {
-  position: absolute;
-  width: 3px;
-  height: 50%;
-  background-color: gray;
-  left: 5px;
-  top: 10%;
-  animation-name: blink;
-  animation-duration: 800ms;
-  animation-iteration-count: infinite;
-  opacity: 1;
-}
-
-.cursor input:focus + i {
-  display: none;
-}
-
-@keyframes blink {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -320,8 +295,6 @@ body {
   box-shadow: 0 6px 9px 4px rgb(155, 155, 155);
 }
 
-
-
 #reshuffle,
 #start,
 #playAgain,
@@ -362,6 +335,22 @@ body {
 .messageLog {
   display: flex;
   justify-content: center;
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  border-radius: 5px;
+  border-top: 5px solid rgb(254, 120, 120);
+  box-shadow: 0 6px 9px 0px rgb(155, 155, 155);
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  width: auto;
+  height: 300px;
+  overflow: auto;
 }
 
 #gameInfo {
@@ -406,6 +395,14 @@ p {
   font-family: 'Montserrat', sans-serif;
   color: rgb(70, 70, 70);
   text-align:center;
+}
+
+ul {
+  padding-bottom: 5px;
+}
+
+li {
+  padding: 10px;
 }
 
 .linethrough {

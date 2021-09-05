@@ -46,10 +46,25 @@
       <button id='start' class='button' type="button">Start Game</button>
     </div>
     <div class="rules">
-      <p>These are some rules</p>
-      <p>These are some rules</p>
-      <p>These are some rules</p>
-      <p>These are some rules</p>
+      <ol>
+        <li>Each player has a 10x10 board on which they can place 5 ships</li>
+        <ul>
+          <li>A destroyer (2 squares)</li>
+          <li>A submarine (3 squares)</li>
+          <li>A cruiser (3 squares)</li>
+          <li>A battleship (4 squares)</li>
+          <li>A carrier (5 squares)</li>
+        </ul>
+        <li>Ships can be oriented vertically or horizontally</li>
+        <li>Each square on the grid corresponds with a coordinate (A-J for columns and 1-10 for rows)</li>
+        <li>Players take turns firing at a square on the opposing player's grid</li>
+        <ul>
+          <li>If the square contains a ship, then the shot is a <strong>HIT</strong></li>
+          <li>If the square is empty, then the shot is a <strong>MISS</strong></li>
+        </ul>
+        <li>A ship sinks when all the squares for that ship have been marked as <strong>HIT</strong></li>
+        <li>The game ends when one player has sunk all of the opponent's ships</li>
+      </ol>
     </div>
 
     <div id='gameInfo'>
