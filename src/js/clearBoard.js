@@ -8,5 +8,10 @@ const clearBoard = (squares) => {
     $(square).removeClass('cruiser');
     $(square).removeClass('battleship');
     $(square).removeClass('carrier');
+    $(square).removeClass('opponentDestroyer');
+    $(square).removeClass('opponentSubmarine');
+    $(square).removeClass('opponentCruiser');
+    $(square).removeClass('opponentBattleship');
+    $(square).removeClass('opponentCarrier');
   })
 }

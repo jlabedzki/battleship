@@ -4,9 +4,11 @@ $(document).ready(() => {
   $('.rules').hide();
 
   $('#usernameSubmit').click(() => {
-    $('#playerName').html(`${$('#username').val()}`)
+    const username = $('#username').val();
+    $('#playerName').html(`${username}`)
     $('#welcome').hide();
     $('#main').show();
+    $('#leaderboard').append(`<tr><td>${$('#playerName').html()}</td><td id="numOfWins">0</td></tr>`);
   });
 
   $('#username').on('keypress', e => {
@@ -18,11 +20,12 @@ $(document).ready(() => {
   })
 
   $('#rules').click(() => {
-    $('.rules').show();
+    if ($('.rules').is(':hidden')) $('.rules').show()
+    else $('.rules').hide();
   })
 
   $('#gameInfo').hide();
-  $('.gameOver').hide();
+  $('#endInfo').hide();
 
   generateBoard(userGrid, userSquares, 100);
   generateBoard(opponentGrid, opponentSquares, 100);
@@ -80,7 +83,7 @@ $(document).ready(() => {
     randomizeShips(opponentBattleship, opponentSquares);
     randomizeShips(opponentCarrier, opponentSquares);
 
-    $('.gameOver').hide();
+    $('#endInfo').hide();
     $('.button').show();
 
     $('#pDestroyer').removeClass('linethrough');

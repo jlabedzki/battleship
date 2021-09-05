@@ -1,5 +1,5 @@
-// let isGameOver = false;
 let turn = 'user';
+let playerWins = 0;
 let opponentPreviousTurn;
 
 let destroyerCount = 2;
@@ -150,7 +150,10 @@ const gameplay = () => {
     $('#gameInfo').hide();
 
     if (userTotalCount === 0) return gameOver('Opponent');
-    if (opponentTotalCount === 0) return gameOver('Player');
+    if (opponentTotalCount === 0) {
+      playerWins++;
+      return gameOver($('#playerName').html());
+    }
   }
 
   if (turn === 'user') {
@@ -181,9 +184,12 @@ const gameplay = () => {
 }
 
 const gameOver = player => {
+  if (player === $('#playerName').html()) {
+    $('#numOfWins').html(playerWins);
+  }
   $(playerTurn).html('');
   $(opponentTurn).html('');
   $('#winner').html(`Winner: ${player}`);
-  $('.gameOver').show();
+  $('#endInfo').show();
   return;
 }
