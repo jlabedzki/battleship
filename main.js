@@ -1,6 +1,29 @@
 $(document).ready(() => {
+  $('#main').hide();
+  $('#usernameSubmit').hide();
+  $('.rules').hide();
+
+  $('#usernameSubmit').click(() => {
+    $('#playerName').html(`${$('#username').val()}`)
+    $('#welcome').hide();
+    $('#main').show();
+  });
+
+  $('#username').on('keypress', e => {
+    if (e.which === 13 && $('#username').val()) {
+      setTimeout(() => {
+        $('#usernameSubmit').click();
+      }, 300);
+    }
+  })
+
+  $('#rules').click(() => {
+    $('.rules').show();
+  })
+
   $('#gameInfo').hide();
   $('.gameOver').hide();
+
   generateBoard(userGrid, userSquares, 100);
   generateBoard(opponentGrid, opponentSquares, 100);
 
@@ -38,6 +61,7 @@ $(document).ready(() => {
     gameplay();
     $('.button').hide();
     $('#gameInfo').show();
+    $('.rules').hide();
   });
 
   $('#playAgain').click(() => {
