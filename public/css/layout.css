@@ -1,0 +1,89 @@
+h1,
+h2,
+h3 {
+  color: rgb(70, 70, 70);
+  font-family: 'Bangers', cursive;
+  letter-spacing: 5px;
+}
+
+h1 {
+  font-size: 80px;
+  margin-bottom: -5px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  font-size: 60px;
+  margin-bottom: -5px;
+  margin-top: 10px;
+}
+
+body,
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.boardTitles {
+  display: flex;
+}
+
+.title,
+.title2 {
+  width: 100%;
+  background-color: rgb(78, 80, 111);
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  line-height: 40px;
+  height: 40px;
+  box-shadow: 0 4px 7px -1px rgb(111, 111, 111);
+}
+
+.title {
+  border-radius: 3px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width:auto;
+}
+
+.userContainer,
+.opponentContainer {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+p,
+table {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(70, 70, 70);
+  text-align:center;
+}
+
+ul {
+  padding-bottom: 5px;
+}
+
+li {
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 10px;
+}

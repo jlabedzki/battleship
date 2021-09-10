@@ -187,8 +187,6 @@ const gameOver = player => {
   if (player === $('#playerName').html()) {
     $('#numOfWins').html(playerWins);
   }
-  $(playerTurn).html('');
-  $(opponentTurn).html('');
   $('#winner').html(`Winner: ${player}`);
   $('#endInfo').show();
   return;

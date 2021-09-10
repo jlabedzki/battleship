@@ -14,7 +14,7 @@ const randomizeShips = (ship, array) => {
   }
 
   //Initialize a random starting square to place a ship based on the number of squares on the board minus the length of the ship times its direction. This equation could produce a negative number, thus the use of Math.abs()
-  const randomize = Math.abs(Math.floor(Math.random() * 100 - (ship.directions[0].length * direction)));
+  const randomize = Math.abs(Math.floor(Math.random() * 100 - (horizontal.length * direction)));
 
   const taken = currentDirection.some(ind => array[randomize + ind].classList.contains('taken'));
 

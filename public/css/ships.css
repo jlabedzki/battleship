@@ -1,0 +1,40 @@
+.destroyer,
+.submarine,
+.cruiser,
+.battleship,
+.carrier {
+  background: rgb(254, 120, 120) !important;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  margin: auto;
+  transform: scale(1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgb(235, 127, 127, 0.7);
+    /* background: rgb(254, 120, 120, 0.5); */
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    /* background: rgb(254, 120, 120, 1); */
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    /* background: rgb(254, 120, 120, 0.); */
+  }
+}
+
+.opponentDestroyer,
+.opponentSubmarine,
+.opponentCruiser,
+.opponentBattleship,
+.opponentCarrier {
+  opacity: 0%;
+}

@@ -1,0 +1,42 @@
+.buttonHolder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#reshuffle,
+#start,
+#playAgain,
+#rulesButton {
+  margin: 20px;
+  padding: 10px;
+  width: 300px;
+  font-size: 25px;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 3px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(254, 120, 120);
+  color: white;
+  box-shadow: 0 6px 9px -1px rgb(155, 155, 155);
+}
+
+#playAgain {
+  margin: 10px;
+}
+
+#reshuffle:hover,
+#start:hover,
+#playAgain:hover,
+#rulesButton:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  color: white;
+}
+
+#reshuffle:active,
+#start:active,
+#playAgain:active,
+#rulesButton:active {
+  transform: scale(1);
+}
