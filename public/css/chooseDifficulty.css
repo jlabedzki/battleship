@@ -1,0 +1,11 @@
+#chooseDifficulty {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#chooseDifficulty h1 {
+  margin: 10px;
+}

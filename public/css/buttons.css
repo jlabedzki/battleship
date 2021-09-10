@@ -7,7 +7,10 @@
 #reshuffle,
 #start,
 #playAgain,
-#rulesButton {
+#rulesButton,
+#easy,
+#medium,
+#hard {
   margin: 20px;
   padding: 10px;
   width: 300px;
@@ -28,7 +31,10 @@
 #reshuffle:hover,
 #start:hover,
 #playAgain:hover,
-#rulesButton:hover {
+#rulesButton:hover,
+#easy:hover,
+#medium:hover,
+#hard:hover {
   transform: scale(1.05);
   cursor: pointer;
   color: white;
@@ -37,6 +43,9 @@
 #reshuffle:active,
 #start:active,
 #playAgain:active,
-#rulesButton:active {
+#rulesButton:active,
+#easy:active,
+#medium:active,
+#hard:active {
   transform: scale(1);
 }

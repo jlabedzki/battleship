@@ -1,3 +1,6 @@
+(function ($) {
+
+})(jQuery);
 const randomizeShips = (ship, array) => {
   const horizontal = ship.directions[0];
   const vertical = ship.directions[1];

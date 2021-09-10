@@ -1,3 +1,4 @@
+
 const userGrid = $('.userGrid');
 const opponentGrid = $('.opponentGrid');
 const $start = $('#start');
@@ -12,3 +13,4 @@ const $rulesButton = $('#rulesButton');
 const $rules = $('.rules');
 const $reshuffle = $('#reshuffle');
 const $playAgain = $('#playAgain');
+const $chooseDifficulty = $('#chooseDifficulty');

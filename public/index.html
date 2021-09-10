@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/turn-indicator.css">
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/chooseDifficulty.css">
 
   <!-- Exertnal JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -36,6 +37,15 @@
     </div>
   </div>
 
+  <div id="chooseDifficulty">
+    <h1>Choose difficulty</h1>
+    <div class="buttonholder">
+      <button id="easy">Easy</button>
+      <button id="medium">Medium</button>
+      <button id="hard">Hard</button>
+    </div>
+  </div>
+
   <div id="main">
 
     <div class='mainContainer'>
@@ -46,7 +56,7 @@
         <div id="playerTurn" class="underline"></div>
       </div>
       <div class='opponentContainer'>
-        <h2 class='title'>OPPONENT
+        <h2 id="opponentName" class='title'>OPPONENT
         </h2>
         <div class='grid opponentGrid'></div>
         <div id="opponentTurn" class="underline"></div>
@@ -125,7 +135,6 @@
   </div>
 
   <!-- App JS -->
-
   <script src="./js/ships.js"></script>
   <script src="./js/constants.js"></script>
   <script src="./js/generateBoard.js"></script>

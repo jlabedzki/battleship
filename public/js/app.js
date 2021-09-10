@@ -21,9 +21,10 @@
   });
 
   const elementsToBeHiddenBeforeStart = () => {
-    $('#main').hide();
     $usernameSubmit.hide();
     $rules.hide();
+    $chooseDifficulty.hide();
+    $('#main').hide();
     $('#gameInfo').hide();
     $('#endInfo').hide();
   }
@@ -32,7 +33,9 @@
     const username = $('#username').val();
     $('#playerName').text(`${username}`)
     $('#welcome').hide();
-    $('#main').show();
+    //change below to 'difficulty.show()' after creating div
+    $chooseDifficulty.show();
+    // $('#main').show();
     $('#leaderboard').append(`<tr><td>${$('#playerName').html()}</td><td id="numOfWins">0</td></tr>`);
   };
 
@@ -42,7 +45,7 @@
         $('#usernameSubmit').click();
       }, 300);
     }
-  })
+  });
 
   const toggleRules = () => {
     if ($rules.is(':hidden')) {

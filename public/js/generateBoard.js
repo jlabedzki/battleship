@@ -1,5 +1,8 @@
 //Generates a blank board with 100 individual squares
 //Each square is labeled A-J, 1-10
+(function ($) {
+
+})(jQuery);
 const generateBoard = (grid, squares, amount) => {
   let counter = 1;
 
