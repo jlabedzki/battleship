@@ -1,9 +1,10 @@
 const express = require('express');
-const app = express()
+const path = require('path');
+const http = require('http');
+const app = express();
+const PORT = 8080;
+const server = http.createServer(app);
 
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/replays', function (req, res) {
-  res.send('replay page!');
-})
-
-app.listen(3000)
+server.listen(PORT);

@@ -1,4 +1,3 @@
-
 const userGrid = $('.userGrid');
 const opponentGrid = $('.opponentGrid');
 const $start = $('#start');

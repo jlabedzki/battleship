@@ -21,7 +21,6 @@ $(document).ready(() => {
   })
 });
 
-
 let turn = 'user';
 let playerWins = 0;
 let opponentPreviousTurn;
@@ -391,7 +390,6 @@ const opponentFireHardDifficulty = () => {
   opponentFireHardDifficulty();
 };
 
-
 const gameOver = player => {
   if (player === $('#playerName').html()) {
     $('#numOfWins').html(playerWins);
@@ -400,5 +398,3 @@ const gameOver = player => {
   $('#endInfo').show();
   return;
 }
-
-
