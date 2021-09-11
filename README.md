@@ -35,3 +35,13 @@ None.
   - When the game is over, a leaderboard is displayed showing the amount of wins the player has over the AI.
 
 ## Final Product
+
+!["Screenshot of username input"](https://github.com/jlabedzki/battleship/blob/main/docs/Screen%20Shot%202021-09-11%20at%208.49.05%20AM.png?raw=true)
+
+!["Screenshot of choose difficulty"](https://github.com/jlabedzki/battleship/blob/main/docs/Screen%20Shot%202021-09-11%20at%208.49.13%20AM.png?raw=true)
+
+!["Screenshot of pre-game UI"](https://github.com/jlabedzki/battleship/blob/main/docs/pre-game.gif?raw=true)
+
+!["Screenshot of gameplay UI"](https://github.com/jlabedzki/battleship/blob/main/docs/gameplay.gif?raw=true)
+
+!["Screenshot of post-game UI"](https://github.com/jlabedzki/battleship/blob/main/docs/Screen%20Shot%202021-09-11%20at%208.55.06%20AM.png?raw=true)
